@@ -1,0 +1,173 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:poppins;
+}
+.clearfix::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+@font-face{
+    font-family:poppins;
+    src:url(fonts/Poppins-Regular.otf);
+}
+body{
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);         
+}
+/*Banner division designing starts*/
+.banner{
+    width:50%;
+    margin:0 auto;
+    text-align:center;
+    padding-top:30px;
+}
+/*Banner division designing ends*/
+/*Cards designing starts here*/
+.cards{
+    width:95%;
+    margin:20px auto;
+}
+.cards .first{
+    float:left;
+    border-top:8px solid rgb(26, 238, 26);
+    animation:leftmove 1.3s linear 1;
+}
+@keyframes leftmove{
+    0%{
+        transform:translateY(-15%);
+    }
+    10%{
+        transform:translateY(0%);
+    }
+    25%{
+        transform:translateY(10%)
+    }
+    50%{
+        transform:translateY(20%);
+    }
+    75%{
+        transform:translateY(30%);
+    }
+    100%{
+        transform:translateY(40%);
+    }
+}
+.cards .two-cards .second{
+    border-top:8px solid red;
+    cursor:pointer;
+    transition:transform 0.3s ease-in;
+    animation:zoominsec 1.3s linear 1;
+}
+.cards .two-cards .third{
+    border-top:8px solid orange;
+    cursor:pointer;
+    transition:transform 0.3s ease-in;
+    animation:zoominsec 1.3s linear 1;
+}
+@keyframes zoominsec{
+    0%{
+        transform:scale(0);
+    }
+    25%{
+        transform:scale(0.25);
+    }
+    50%{
+        transform:scale(0.5);
+    }
+    75%{
+        transform:scale(0.75);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+.cards .fourth{
+    float:left;
+    margin-left:2%;
+    border-top:8px solid green;
+    animation:leftmove 1.3s linear 1;
+}
+.cards .first,
+.cards .fourth{
+    width:30%;
+    padding:30px 20px;
+    background-color:#fff;
+    font-size:20px;
+    transform:translateY(40%);
+    transition:transform 0.3s ease-in;
+    cursor:pointer;
+}
+.cards .two-cards .second:hover,.cards .two-cards .third:hover{
+    transform:scale(1.1);
+}
+.cards .first:hover,
+.cards .fourth:hover{
+    transform:scale(1.1) translateY(40%);
+}
+.cards .first img,
+.cards .two-cards .second img,
+.cards .two-cards .third img,
+.cards .fourth img{
+    margin-left:75%;
+    margin-top:20%;
+}
+.cards .two-cards .second,
+.cards .two-cards .third{
+    width:100%;
+    padding:30px 20px;
+    background-color:#fff;
+    font-size:20px;
+    margin:5% 0%;
+}
+.cards .two-cards{
+    width:35%;
+    float:left;
+    margin-left:2%;
+}
+.cards .first,
+.cards .fourth,
+.cards .two-cards .second,
+.cards .two-cards .third{
+    border-radius:10px;
+    box-shadow:2px 2px 20px #000;
+}
+@media only screen and (max-width:1000px){
+    .banner{
+        font-size:15px;
+    }
+    .cards{
+        width:80%;
+        display:flex;
+        flex-direction: column;
+        text-align:center;
+    }
+    .cards .first,.cards .two-cards,.cards .fourth{
+        width:75%;
+        clear:both;
+        margin-left:0;
+        margin:0 auto;
+    }
+    .cards .first,
+    .cards .fourth{
+        width:75%;
+        transform:none;
+        margin-left:0;
+        margin:0 auto;
+    }
+    .cards .first,
+    .cards .fourth,
+    .cards .two-cards .second,
+    .cards .two-cards .third{
+        animation:none
+    }
+    .cards .first:hover,
+    .cards .fourth:hover,
+    .cards .two-cards .second:hover,
+    .cards .two-cards .third:hover{
+        transform:none;
+    }
+}
+/*Cards designing ends here*/
