@@ -27,6 +27,7 @@ transition: [transition-property] [transition-duration] [transition-timing-funct
      100%{
      /*Code for animation at the end*/
      }
+  }
    ```
 ## Desktop Design
 ![image](https://user-images.githubusercontent.com/78952955/141609874-5c649780-26c3-4a0f-b5e1-fa6380174b68.png)
